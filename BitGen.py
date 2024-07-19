@@ -32,7 +32,7 @@ def image_to_bitmap(image_path, display=bool):
         hex_value = hex(int(binary_string, 2))[2:].zfill(width // 4)
         hex_matrix.append(f'0x{hex_value}')
 
-    # print(hex_matrix)
+    print(hex_matrix)
     if display == True:
         bs.hex_bitmap_to_string(hex_matrix)
 
@@ -42,6 +42,6 @@ def image_to_bitmap(image_path, display=bool):
 if __name__ == "__main__":
     for i in range(len(bm.bitmaps)):
         try:
-            hex_matrix = image_to_bitmap(f'BITMAP/{bm.bitmaps[i]}.png', True)
+            hex_matrix = image_to_bitmap(f'useful/{bm.bitmaps[i]}.png', True)
         except Exception as e:
             print(f"Произошла ошибка: {e}")

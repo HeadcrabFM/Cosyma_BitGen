@@ -16,7 +16,6 @@ def display_letters_in_row(matrices):
             binary_str = format(row, '07b')  # преобр. в 7-битное бинарное представление
             rows[i] += ' '.join(
                 pix if bit == '1' else void for bit in binary_str) + sep  # расстояне между буквами
-
     # Печатаем строки
     for row in rows:
         print(row)

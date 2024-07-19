@@ -11,8 +11,8 @@ while 1:
     for i in range(len(bm.bitmaps)):
         try:
             print(f'\nБитмап {i+1}:\t{bm.bitmaps[i]}.png\n')
-            hex_matrix = bg.image_to_bitmap(f'BITMAP/{bm.bitmaps[i]}.png', True)
+            hex_matrix = bg.image_to_bitmap(f'{bm.folder}/{bm.bitmaps[i]}.png', True)
         except Exception as e:
-            print(f"Произошла ошибка: {e}")
-        input('Нажмите Энтер для генерации следующего битмапа . . .')
+            print(f"Произошла ошибка:  {e}")
+        input('Нажмитfе Энтер для генерации следующего битмапа . . .')
     input('press any key to relaunch...\t')
