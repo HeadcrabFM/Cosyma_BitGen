@@ -42,6 +42,6 @@ def image_to_bitmap(image_path, display=bool):
 if __name__ == "__main__":
     for i in range(len(bm.bitmaps)):
         try:
-            hex_matrix = image_to_bitmap(f'useful/{bm.bitmaps[i]}.png', True)
+            hex_matrix = image_to_bitmap(f'{bm.folder}/{bm.bitmaps[i]}.png', True)
         except Exception as e:
             print(f"Произошла ошибка: {e}")
